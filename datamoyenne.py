@@ -20,6 +20,9 @@ cursor = conn.cursor()
 
 try:
     # liste pour stocker cinq dernieres distances
+    delete_query = "DELETE FROM donnee"
+    cursor.execute(delete_query)
+    conn.commit()
     cinq = []
 
     while True:
